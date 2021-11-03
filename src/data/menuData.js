@@ -26,13 +26,6 @@ const menuData = [
         description: `Description for Item 4`,
         image: "none.png",
         route: "/item4"
-    },
-    {
-        key: "item5",
-        name: "Item 5",
-        description: `Description for Item 5`,
-        image: "none.png",
-        route: "/item5"
     }
 ];
 
