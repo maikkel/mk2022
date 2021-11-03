@@ -1,0 +1,34 @@
+body, html {
+  background-color: darkgrey;
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+
+  a {
+    color: white;
+  }
+}
+
+.app {
+ .container {
+    min-width: 200px;
+    max-width: 610px;
+    width: 610px;
+
+    min-height: 300px;
+    max-height: 100%;
+
+    @media (max-width: 630px) {
+      width: 100%;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    .block {
+      width: 100%;
+      position: relative;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
+}

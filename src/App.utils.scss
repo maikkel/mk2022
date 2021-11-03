@@ -1,0 +1,23 @@
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fixed {
+  position: fixed;
+}
+
+.h300 {
+  height: 300px;
+}
+.h200 {
+  height: 200px;
+}
+.h100 {
+  height: 100px;
+}
+.white {
+  color: white;
+}
