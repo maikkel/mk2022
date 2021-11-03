@@ -5,39 +5,7 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Menu from "./components/Menu";
 import Content from "./components/Content";
-
-const menuData = [
-  {
-    name: "Item 1",
-    description: `Description for Item 1`,
-    image: "none.png",
-    route: "/item1"
-  },
-  {
-    name: "Item 2",
-    description: `Description for Item 2`,
-    image: "none.png",
-    route: "/item2"
-  },
-  {
-    name: "Item 3",
-    description: `Description for Item 3`,
-    image: "none.png",
-    route: "/item3"
-  },
-  {
-    name: "Item 4",
-    description: `Description for Item 4`,
-    image: "none.png",
-    route: "/item4"
-  },
-  {
-    name: "Item 5",
-    description: `Description for Item 5`,
-    image: "none.png",
-    route: "/item5"
-  }
-];
+import menuData from "./data/menuData";
 
 export default function App() {
   return (

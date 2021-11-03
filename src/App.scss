@@ -9,13 +9,21 @@ body, html {
   }
 }
 
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .app {
  .container {
     min-width: 200px;
     max-width: 610px;
     width: 610px;
 
-    min-height: 300px;
+    //min-height: 300px;
     max-height: 100%;
 
     @media (max-width: 630px) {
