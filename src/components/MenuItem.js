@@ -14,7 +14,7 @@ export default function MenuItem({ itemData, index, total }) {
         to={itemData.route}
         style={{ transform: "rotate(" + rotation * -1 + "deg)" }}
       >
-        &nbsp;
+        {itemData.name}
       </Link>
     </div>
   );
