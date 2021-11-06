@@ -6,7 +6,7 @@ export default function Content({ menuData }) {
   const routes = menuData.map((item) => {
     if (item.type === itemTypes.COMPONENT) {
       return (
-        <Route exact path={item.route} key={item.key}>
+        <Route exact path={item.url} key={item.key}>
           {item.key} - {item.name}
         </Route>
       );
