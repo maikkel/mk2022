@@ -1,6 +1,6 @@
-import "./App.reset.scss";
-import "./App.utils.scss";
-import "./App.scss";
+import "./scss/App.reset.scss";
+import "./scss/App.utils.scss";
+import "./scss/App.scss";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Menu from "./components/Menu";

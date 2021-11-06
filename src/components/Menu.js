@@ -1,4 +1,4 @@
-import "./Menu.scss";
+import "../scss/Menu.scss";
 import MenuItem from "./MenuItem.js";
 import logo from "../images/logo.svg";
 

@@ -1,4 +1,4 @@
-import "./Content.scss";
+import "../scss/Content.scss";
 import { Route, Switch } from "react-router-dom";
 import itemTypes from "../data/itemTypes";
 

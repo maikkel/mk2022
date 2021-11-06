@@ -1,0 +1,19 @@
+.menu {
+  .main {
+    background-color: black;
+    border-radius: 50%;
+    transition-delay: 0s;
+  }
+  .menu-item {
+    a.link {
+      top: -160px;
+      opacity: 1;
+      transition-delay: .1s;
+      &:hover {
+        background-color: red;
+        transition-timing-function: ease-in;
+        transition-duration: .2s;
+      }
+    }
+  }
+}

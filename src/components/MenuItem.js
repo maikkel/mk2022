@@ -1,4 +1,3 @@
-import "./MenuItem.scss";
 import { Link } from "react-router-dom";
 import itemTypes from "../data/itemTypes";
 
