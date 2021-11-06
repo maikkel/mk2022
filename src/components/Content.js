@@ -1,13 +1,18 @@
 import "./Content.scss";
 import { Route, Switch } from "react-router-dom";
+import itemTypes from "../data/itemTypes";
 
 export default function Content({ menuData }) {
   const routes = menuData.map((item) => {
-    return (
-      <Route exact path={item.route} key={item.key}>
-        {item.name}
-      </Route>
-    );
+    if (item.type === itemTypes.COMPONENT) {
+      return (
+        <Route exact path={item.route} key={item.key}>
+          {item.key} - {item.name}
+        </Route>
+      );
+    } else {
+      return null;
+    }
   });
 
   return (

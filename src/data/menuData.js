@@ -1,31 +1,37 @@
+import itemTypes from "./itemTypes";
+
 const menuData = [
   {
-    key: "item1",
-    name: "Item 1",
-    description: `Description for Item 1`,
+    key: "exploring-switzerland",
+    name: "Exploring Switzerland",
+    description: `My YouTube channel with videos from all over Switzerland`,
     image: "none.png",
-    route: "/item1",
+    type: itemTypes.EXTERNAL,
+    url: "https://www.youtube.com/c/MaikKellerhals",
   },
   {
-    key: "item2",
-    name: "Item 2",
-    description: `Description for Item 2`,
+    key: "github",
+    name: "GitHub",
+    description: `My GitHub profile`,
     image: "none.png",
-    route: "/item2",
+    type: itemTypes.COMPONENT,
+    url: "/item2",
   },
   {
     key: "item3",
     name: "Item 3",
     description: `Description for Item 3`,
     image: "none.png",
-    route: "/item3",
+    type: itemTypes.COMPONENT,
+    url: "/item3",
   },
   {
     key: "item4",
     name: "Item 4",
     description: `Description for Item 4`,
     image: "none.png",
-    route: "/item4",
+    type: itemTypes.COMPONENT,
+    url: "/item4",
   },
 ];
 
