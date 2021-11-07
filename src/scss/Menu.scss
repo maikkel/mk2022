@@ -1,3 +1,6 @@
+$menu-item-size: 100px;
+$menu-item-distance: 160px;
+
 .menu-container {
   position: relative;
   height: auto;
@@ -25,6 +28,7 @@
         top: 50%;
         width: 200px;
         height: 200px;
+        border-radius: 50%;
         -webkit-filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, .3));
         filter: drop-shadow( 2px 2px 2px rgba(0, 0, 0, .3));
       }
@@ -32,32 +36,82 @@
     .menu-item {
       position: absolute;
       display: block;
-      width: 100px;
-      height: 100px;
+      width: $menu-item-size + 4px;
+      height: $menu-item-size + 4px;
       left: 50%;
       top: 50%;
       transform: translate(-50%,-50%) rotate(45deg);
 
-      a.link {
+      .link {
         display: block;
         position: absolute;
-        width: 100px;
-        height: 100px;
+        width: $menu-item-size;
+        height: $menu-item-size;
         top: 0;
         left: 0;
-        background-color: black;
+        background-color: transparent;
         border-radius: 50%;
         transition-property: left, top, width, height, opacity, background-color;
         transition-duration: .5s;
         transition-timing-function: ease-out;
         transition-delay: 0s;
         opacity: 0;
-        border: 2px solid white;
-        box-shadow: 0 0 0 3px rgba(0, 0, 0, 1), inset 0 0 0 3px rgba(0, 0, 0, 1);
+        background-size: 100px;
+
+        a {
+          transition: all .2s ease-out;
+          display: block;
+          position: absolute;
+          border-radius: 50%;
+          top: 0;
+          left: 0;
+          width: $menu-item-size;
+          height: $menu-item-size;
+          border: 2px solid white;
+          box-shadow: 0 0 0 3px rgba(0, 0, 0, 1), inset 0 0 0 3px rgba(0, 0, 0, 1);
+        }
+
+        img.on {
+          width: $menu-item-size;
+          height: $menu-item-size;
+          box-sizing: border-box;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 50%;
+          opacity: 0;
+          transition: opacity .2s linear;
+        }
       }
     }
   }
   &:hover {
-    @import 'src/scss/MenuHover';
+    .menu {
+      .main {
+        background-color: black;
+        border-radius: 50%;
+        transition-delay: 0s;
+      }
+      .menu-item {
+        .link {
+          top: -$menu-item-distance;
+          opacity: 1;
+          transition-delay: .1s;
+          &:hover {
+            transition-timing-function: ease-in;
+            transition-duration: .2s;
+
+            a {
+              border-color: black;
+              box-shadow: 0 0 0 3px rgba(0, 0, 0, 1), inset 0 0 5px 5px rgba(0, 0, 0, .3);
+            }
+
+            img.on {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
   }
 }
