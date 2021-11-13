@@ -18,6 +18,11 @@ body, html {
   height: 100%;
 }
 
+.loadingText {
+  color: red;
+  font-weight: bold;
+}
+
 .app {
  .container {
     min-width: 200px;
