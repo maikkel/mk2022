@@ -11,7 +11,7 @@ const menuData = [
   {
     key: "photos",
     name: "Photography",
-    description: `My photos - I'm not in them ;)`,
+    description: `My best photos - I'm not in them ;)`,
     type: itemTypes.EXTERNAL,
     url: "https://maikkellerhals.myportfolio.com/",
   },

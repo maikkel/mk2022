@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import itemTypes from "../data/itemTypes";
 
-export default function MenuItem({ itemData, index, total }) {
+export default function MenuItem({ itemData, index, total, setHoverIndex }) {
   const totalAngle = 180;
   const rotation = index * (totalAngle / (total - 1)) - totalAngle / 2;
   const linkStyle = {
@@ -14,7 +14,12 @@ export default function MenuItem({ itemData, index, total }) {
   switch (itemData.type) {
     case itemTypes.COMPONENT:
       link = (
-        <div className="link" style={linkStyle}>
+        <div
+          className="link"
+          style={linkStyle}
+          onMouseEnter={() => setHoverIndex(index)}
+          onMouseLeave={() => setHoverIndex(null)}
+        >
           <img
             className="on"
             src={`/icons/${itemData.key}-on.png`}
@@ -27,7 +32,12 @@ export default function MenuItem({ itemData, index, total }) {
     case itemTypes.EXTERNAL:
     default:
       link = (
-        <div className="link" style={linkStyle}>
+        <div
+          className="link"
+          style={linkStyle}
+          onMouseEnter={() => setHoverIndex(index)}
+          onMouseLeave={() => setHoverIndex(null)}
+        >
           <img
             className="on"
             src={`/icons/${itemData.key}-on.png`}
