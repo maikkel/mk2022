@@ -37,7 +37,7 @@ export default function Menu({ menuData, menuDataSocial }) {
         {menuItemsSocial}
         <div className="main">
           <img className="logo" src={logo} alt="Logo" />
-          <div className={`description ${hoverIndex != null && "active"}`}>
+          <div className={`description ${(hoverIndex != null || hoverIndexSocial != null) && "active"}`}>
             <span>
               {hoverIndex != null && menuData[hoverIndex].description}
               {hoverIndexSocial != null && menuDataSocial[hoverIndexSocial].description}
