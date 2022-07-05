@@ -13,7 +13,7 @@ const menuData = [
     name: "Instagram",
     description: `My Instagram (german)`,
     type: itemTypes.EXTERNAL,
-    url: "https://maikkellerhals.myportfolio.com/",
+    url: "https://www.instagram.com/kellerhalsmaik/",
   },
   {
     key: "email",

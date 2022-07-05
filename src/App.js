@@ -27,6 +27,7 @@ export default function App() {
     //       console.error("ERROR while loading menuData -", error);
     //     }
     //   );
+    document.addEventListener("touchstart", function() {}, true);
   }, []);
 
   if (menuData) {
