@@ -115,8 +115,8 @@ $menu-item-distance-social: 130px;
       }
 
       &.social {
-        width: $menu-item-size-social + 4px;
-        height: $menu-item-size-social + 4px;
+        width: $menu-item-size-social + 2px;
+        height: $menu-item-size-social + 2px;
         .link {
           width: $menu-item-size-social;
           height: $menu-item-size-social;
@@ -125,6 +125,7 @@ $menu-item-distance-social: 130px;
           a {
             width: $menu-item-size-social;
             height: $menu-item-size-social;
+            border: none;
           }
 
           img.on {
