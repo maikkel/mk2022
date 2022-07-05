@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import itemTypes from "../data/itemTypes";
 
-export default function MenuItem({ itemData, index, total, setHoverIndex }) {
-  const totalAngle = 180;
-  const rotation = index * (totalAngle / (total - 1)) - totalAngle / 2;
+export default function MenuItem({ itemData, index, total, setHoverIndex, social = false }) {
+  const totalAngle = social ? 65 : 190;
+  const rotation = social ? index * (totalAngle / (total - 1)) - totalAngle / 2 -180 : index * (totalAngle / (total - 1)) - totalAngle / 2;
   const linkStyle = {
     transform: "rotate(" + rotation * -1 + "deg)",
     backgroundImage: `url(/icons/${itemData.key}-off.png)`,
@@ -51,7 +51,7 @@ export default function MenuItem({ itemData, index, total, setHoverIndex }) {
 
   return (
     <div
-      className="menu-item"
+      className={`menu-item ${social ? 'social' : ''}`}
       style={{ transform: "translate(-50%,-50%) rotate(" + rotation + "deg)" }}
     >
       {link}

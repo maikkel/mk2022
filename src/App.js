@@ -5,26 +5,28 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import Menu from "./components/Menu";
 import Content from "./components/Content";
+import menuDataSocial from "./data/menuDataSocial";
+import menuData from "./data/menuData";
 
 export default function App() {
-  const [menuData, setMenuData] = useState(null);
-  const [loadingText, setLoadingText] = useState("");
+  // const [menuData, setMenuData] = useState(null);
+  const [loadingText] = useState("");
 
   useEffect(() => {
-    console.log("ue");
-    fetch("https://api.maikkellerhals.com/menu-items")
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setMenuData(result);
-          console.info("menuData loaded");
-          console.log(result);
-        },
-        (error) => {
-          setLoadingText("LOADING ERROR!");
-          console.error("ERROR while loading menuData -", error);
-        }
-      );
+    // console.log("ue");
+    // fetch("https://api.maikkellerhals.com/menu-items")
+    //   .then((res) => res.json())
+    //   .then(
+    //     (result) => {
+    //       setMenuData(result);
+    //       console.info("menuData loaded");
+    //       console.log(result);
+    //     },
+    //     (error) => {
+    //       setLoadingText("LOADING ERROR!");
+    //       console.error("ERROR while loading menuData -", error);
+    //     }
+    //   );
   }, []);
 
   if (menuData) {
@@ -32,8 +34,8 @@ export default function App() {
       <Router>
         <div className="app">
           <div className="container center">
-            <Menu menuData={menuData} />
-            <Content menuData={menuData} />
+            <Menu menuData={menuData} menuDataSocial={menuDataSocial} />
+            <Content menuData={menuData} menuDataSocial={menuDataSocial} />
           </div>
         </div>
       </Router>
